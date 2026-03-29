@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notas de Alumnos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Programa de Notas</h1>
+    <p class="subtitle">Ingresa los datos de hasta <strong>10 alumnos</strong></p>
+
+    <!-- FORMULARIO -->
+    <div class="card" id="cardFormulario">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ej: Carlos" />
+      </div>
+      <div class="form-group">
+        <label for="c1">Certamen 1:</label>
+        <input type="number" id="c1" placeholder="0 - 100" min="0" max="100" />
+      </div>
+      <div class="form-group">
+        <label for="c2">Certamen 2:</label>
+        <input type="number" id="c2" placeholder="0 - 100" min="0" max="100" />
+      </div>
+      <div class="form-group">
+        <label for="c3">Certamen 3:</label>
+        <input type="number" id="c3" placeholder="0 - 100" min="0" max="100" />
+      </div>
+
+      <p id="contadorAlumnos" class="contador">Alumnos ingresados: 0 / 10</p>
+      <p id="mensajeError" class="error" style="display:none;"></p>
+
+      <button id="btnAgregar" onclick="agregarAlumno()">Agregar Alumno</button>
+      <button id="btnMostrar" onclick="mostrarResultados()" style="display:none;">Ver Resultados</button>
+      <button id="btnReset" onclick="resetear()" style="display:none;">Reiniciar</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="card" id="cardResultados" style="display:none;">
+      <div id="resultado"></div>
+    </div>
+  </div>
+
+  <script src="formulario.js"></script>
+</body>
+</html>
